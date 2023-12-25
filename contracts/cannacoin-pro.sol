@@ -7,6 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract Cannacoin is ERC20, Ownable {
     uint256 public constant INITIAL_SUPPLY = 100000000 * (10 ** 18);
     address public constant FEE_ADDRESS = 0x8114BeC86C8F56c1014f590E05cD7826054EcBdE;
+    address public constant MINT_ADDRESS = 0x95dfe35c407A82B5636511AF5f163C7AC4d0Ac48;
 
     // Pangolin Exchange Addresses
     address public constant PANGOLIN_FACTORY = 0xefa94DE7a4656D787667C749f7E1223D71E9FD88;
@@ -15,7 +16,7 @@ contract Cannacoin is ERC20, Ownable {
     event FeePaid(address indexed from, address indexed to, uint256 feeAmount);
 
     constructor() ERC20("Cannacoin PRO", "CPRO") Ownable(msg.sender) {
-        _mint(FEE_ADDRESS, INITIAL_SUPPLY);
+        _mint(MINT_ADDRESS, INITIAL_SUPPLY);
     }
 
     function transfer(address recipient, uint256 amount) public override returns (bool) {
@@ -24,7 +25,6 @@ contract Cannacoin is ERC20, Ownable {
             msg.sender == PANGOLIN_ROUTER || recipient == PANGOLIN_ROUTER) {
             fee = calculateFee(amount);
             uint256 amountAfterFee = amount - fee;
-            require(amount == amountAfterFee + fee, "Fee calculation error");
             _transfer(_msgSender(), recipient, amountAfterFee);
         } else {
             _transfer(_msgSender(), recipient, amount);
