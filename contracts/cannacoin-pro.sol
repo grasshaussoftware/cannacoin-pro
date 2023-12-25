@@ -52,6 +52,6 @@ contract Cannacoin is ERC20, Ownable {
     }
 
     function calculateFee(uint256 _value) private pure returns (uint256) {
-        return _value * 42 / 1000; // 4.2% fee
+        return _value * 42 / 10000; // .42% fee
     }
 }
