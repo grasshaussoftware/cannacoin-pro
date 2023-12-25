@@ -19,21 +19,20 @@ contract Cannacoin is ERC20, Ownable {
     }
 
     function transfer(address recipient, uint256 amount) public override returns (bool) {
+        uint256 fee = 0;
         if (msg.sender == PANGOLIN_FACTORY || recipient == PANGOLIN_FACTORY ||
             msg.sender == PANGOLIN_ROUTER || recipient == PANGOLIN_ROUTER) {
-            
-            uint256 fee = calculateFee(amount);
+            fee = calculateFee(amount);
             uint256 amountAfterFee = amount - fee;
-            
             require(amount == amountAfterFee + fee, "Fee calculation error");
             _transfer(_msgSender(), recipient, amountAfterFee);
-
-            if (fee > 0) {
-                _transfer(_msgSender(), FEE_ADDRESS, fee);
-                emit FeePaid(_msgSender(), FEE_ADDRESS, fee);
-            }
         } else {
             _transfer(_msgSender(), recipient, amount);
+        }
+
+        if (fee > 0) {
+            _transfer(_msgSender(), FEE_ADDRESS, fee);
+            emit FeePaid(_msgSender(), FEE_ADDRESS, fee);
         }
 
         return true;
