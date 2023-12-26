@@ -7,7 +7,7 @@ module.exports = {
   networks: {
     development: {
       host: "127.0.0.1",
-      port: 7545, // This is the default port for Ganache; change it if you use a different port
+      port: 8545, // This is the default port for Ganache; change it if you use a different port
       network_id: "*", // Match any network
     },
     avalanche: {
@@ -29,7 +29,7 @@ module.exports = {
 
   compilers: {
     solc: {
-      version: "0.8.23", // Use the same version as your contracts
+      version: "0.8.20", // Use the same version as your contracts
       settings: {
         optimizer: {
           enabled: true,
