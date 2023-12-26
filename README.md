@@ -13,5 +13,5 @@ Cannacoin PRO is a simple token for a simple purpose. Investing in cannabis and 
 - Cannacoin-Pro maintains exclusivity with a **total supply of 100 million tokens**, which aids in preserving their value.
 
 ### Ownership Information
-- **Principal Holder's Address:** `0x8114BeC86C8F56c1014f590E05cD7826054EcBdE`
-- **Team's Holding Address:** `0x3536b0152c91E60535508690a650C10bf09fe857`
+- **Owner's Address:** `0x8114BeC86C8F56c1014f590E05cD7826054EcBdE`
+- **Project Address:** `0x3536b0152c91E60535508690a650C10bf09fe857`
