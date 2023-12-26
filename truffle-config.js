@@ -1,7 +1,6 @@
 require('dotenv').config();
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
-// Retrieve the mnemonic from the .env file
 const { MNEMONIC } = process.env;
 
 module.exports = {
@@ -19,8 +18,8 @@ module.exports = {
         providerOrUrl: "https://api.avax.network/ext/bc/C/rpc" // Avalanche C-Chain RPC URL
       }),
       network_id: 43114, // Avalanche C-Chain's network id
-      gas: 3000000, // Adjust the gas limit as needed
-      gasPrice: 225000000000, // Adjust the gas price as needed (in wei)
+      gas: 3000000, // Standard gas limit
+      gasPrice: 250000000000, // Average gas price in wei (250 Gwei)
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true // Set to false if you want to do a dry run
