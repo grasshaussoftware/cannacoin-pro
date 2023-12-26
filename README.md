@@ -1,14 +1,17 @@
 # Cannacoin-Pro
 
 ## Overview
-Cannacoin-Pro is a stealth launch project featuring a unique transaction fee structure and a controlled total supply. This project is designed for efficiency and transparency in the world of digital transactions.
+Cannacoin PRO is a simple token for a simple purpose. Investing in cannabis and blockchain. Minted on the Avalanche C-Chain for fast transactions with miniscule gas fees.
 
-## Key Features
+### Network Maintenance Fee
+- A usage fee of **0.00042% per transaction** is levied to ensure network sustainability and to support ongoing innovation and development of the project.
 
-- **Stealth Launch**: Cannacoin-Pro is launched discreetly to ensure a fair and equitable distribution.
-- **Transaction Fee**: A minimal transaction fee of 0.00042% is charged to facilitate smooth and economical transfers.
-- **Swap Fee**: Involving a swap fee of 4.2%, designed to balance liquidity and incentivize stakeholders.
-- **Total Supply**: The project boasts a total supply of 100 million tokens, ensuring scarcity and value retention.
-- **Ownership Details**:
-  - Owner Address: `0x8114BeC86C8F56c1014f590E05cD7826054EcBdE`
-  - Team Address: `0x3536b0152c91E60535508690a650C10bf09fe857`
+### Holding Incentive Fee
+- To encourage long-term investment, a **4.2% swap fee** is applied, incentivizing token retention.
+
+### Token Availability
+- Cannacoin-Pro maintains exclusivity with a **total supply of 100 million tokens**, which aids in preserving their value.
+
+### Ownership Information
+- **Principal Holder's Address:** `0x8114BeC86C8F56c1014f590E05cD7826054EcBdE`
+- **Team's Holding Address:** `0x3536b0152c91E60535508690a650C10bf09fe857`
