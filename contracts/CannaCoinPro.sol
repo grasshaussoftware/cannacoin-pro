@@ -7,7 +7,8 @@ import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract CannaCoinPro is ERC20, ReentrancyGuard, Ownable {
-    uint256 public constant TOTAL_SUPPLY = 100000000 * (10 ** decimals());
+    uint256 public constant TOTAL_SUPPLY = 100000000 * 10**18; // 100 million tokens with 18 decimals
+
     address public constant DEPLOYER_ADDRESS = 0x8114BeC86C8F56c1014f590E05cD7826054EcBdE;
     address public constant POOL_ADDRESS = 0x3536b0152c91E60535508690a650C10bf09fe857;
     address public constant PANGOLIN_ROUTER = 0xE54Ca86531e17Ef3616d22Ca28b0D458b6C89106; // address verified 12-26-2023
@@ -17,9 +18,9 @@ contract CannaCoinPro is ERC20, ReentrancyGuard, Ownable {
 
     event FeePaid(address indexed from, address indexed to, uint256 feeAmount);
 
-    constructor() ERC20("CannacoinPRO", "CPRO") Ownable() {
-        _mint(DEPLOYER_ADDRESS, 1000000 * (10 ** decimals()));
-        _mint(POOL_ADDRESS, 99000000 * (10 ** decimals()));
+    constructor() ERC20("CannacoinPRO", "CPRO") Ownable(msg.sender) {
+        _mint(DEPLOYER_ADDRESS, 1000000 * 10**18); // Mint 1 million tokens to DEPLOYER_ADDRESS
+        _mint(POOL_ADDRESS, 99000000 * 10**18);    // Mint 99 million tokens to POOL_ADDRESS
     }
 
     function transfer(address recipient, uint256 amount) public override nonReentrant returns (bool) {
