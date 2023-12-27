@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract CannaCoinProFees is ERC20, ReentrancyGuard, Ownable {
@@ -17,7 +17,7 @@ contract CannaCoinProFees is ERC20, ReentrancyGuard, Ownable {
 
     event FeePaid(address indexed from, address indexed to, uint256 feeAmount);
 
-    constructor() ERC20("Cannacoin PRO", "CPRO") {}
+    constructor() ERC20("Cannacoin PRO", "CPRO") Ownable(msg.sender) {}
 
     function transfer(
         address recipient,
