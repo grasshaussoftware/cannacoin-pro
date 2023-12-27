@@ -8,5 +8,5 @@ contract CannaCoinProMint is ERC20 {
 
     constructor() ERC20("Cannacoin PRO", "CPRO") {
     _mint(msg.sender, INITIAL_SUPPLY);
-}
+    }
 }
