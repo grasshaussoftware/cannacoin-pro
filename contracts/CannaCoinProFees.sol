@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.23;
+pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract CannaCoinProFees is ERC20 {
+contract CannaCoinProFees is ERC20, ReentrancyGuard, Ownable {
     address public constant FEE_ADDRESS =
         0x3536b0152c91E60535508690a650C10bf09fe857;
     address public constant PANGOLIN_ROUTER =
@@ -20,7 +22,7 @@ contract CannaCoinProFees is ERC20 {
     function transfer(
         address recipient,
         uint256 amount
-    ) public override returns (bool) {
+    ) public override nonReentrant returns (bool) {
         uint256 fee = 0;
         if (isDexTransaction(msg.sender, recipient)) {
             fee = calculateDexFee(amount);
@@ -50,4 +52,5 @@ contract CannaCoinProFees is ERC20 {
     function calculateDexFee(uint256 _value) private pure returns (uint256) {
         return (_value * 42) / 1000;
     }
+
 }

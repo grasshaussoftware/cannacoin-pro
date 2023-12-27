@@ -1,6 +1,7 @@
 const CannaCoinProFees = artifacts.require("CannaCoinProFees");
 
 module.exports = function (deployer) {
-  // Deploy the CannaCoinProFees contract
-  deployer.deploy(CannaCoinProFees);
+  const gasLimit = 5000000;
+
+  deployer.deploy(CannaCoinProFees, { gas: gasLimit });
 };
