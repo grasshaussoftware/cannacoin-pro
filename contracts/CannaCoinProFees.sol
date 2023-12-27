@@ -2,9 +2,8 @@
 pragma solidity ^0.8.23;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract CannaCoinProFees is ERC20, Ownable {
+contract CannaCoinProFees is ERC20 {
     address public constant FEE_ADDRESS =
         0x3536b0152c91E60535508690a650C10bf09fe857;
     address public constant PANGOLIN_ROUTER =
@@ -16,7 +15,7 @@ contract CannaCoinProFees is ERC20, Ownable {
 
     event FeePaid(address indexed from, address indexed to, uint256 feeAmount);
 
-    constructor() ERC20("Cannacoin PRO", "CPRO") Ownable(msg.sender) {}
+    constructor() ERC20("Cannacoin PRO", "CPRO") {}
 
     function transfer(
         address recipient,
