@@ -15,3 +15,8 @@ Cannacoin PRO is a simple token for a simple purpose. Investing in cannabis and 
 ### Ownership Information
 - **Owner's Address:** `0x8114BeC86C8F56c1014f590E05cD7826054EcBdE`
 - **Project Address:** `0x3536b0152c91E60535508690a650C10bf09fe857`
+
+### Credits
+- Copyright 2023 Trap Haus Enterprise and GrassHausSoftware
+- Made with the assistance of ChatGPT-4
+
