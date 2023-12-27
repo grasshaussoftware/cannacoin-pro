@@ -1,17 +1,31 @@
 {
   "name": "CannaCoin-PRO",
   "version": "1.0.0",
-  "description": "",
+  "description": "CannaCoin-PRO Smart Contract Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "test": "truffle test"
   },
-  "keywords": [],
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "smart-contract",
+    "CannaCoin"
+  ],
   "author": "deusopus",
   "license": "MIT",
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.1",
-    "@truffle/hdwallet-provider": "^2.1.15",
+    "@truffle/hdwallet-provider": "^1.7.0",
     "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "ganache": "^7.9.2",
+    "ganache-cli": "^6.12.2",
+    "mocha": "^9.1.3",
+    "truffle": "^5.5.19"
   }
 }
