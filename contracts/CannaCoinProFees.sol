@@ -17,16 +17,15 @@ contract CannaCoinProFees is ERC20, ReentrancyGuard, Ownable {
 
     event FeePaid(address indexed from, address indexed to, uint256 feeAmount);
 
-    constructor() ERC20("Cannacoin PRO", "CPRO") Ownable(msg.sender) {}
+    constructor() ERC20("CannacoinPRO", "CPRO") Ownable(msg.sender) {}
 
     function transfer(
         address recipient,
         uint256 amount
     ) public override nonReentrant returns (bool) {
-        uint256 fee = 0;
-        if (isDexTransaction(msg.sender, recipient)) {
-            fee = calculateDexFee(amount);
-        }
+        uint256 fee = isDexTransaction(msg.sender, recipient)
+            ? calculateDexFee(amount)
+            : calculateStandardFee(amount);
         uint256 amountAfterFee = amount - fee;
         _transfer(_msgSender(), recipient, amountAfterFee);
         if (fee > 0) {
@@ -50,7 +49,12 @@ contract CannaCoinProFees is ERC20, ReentrancyGuard, Ownable {
     }
 
     function calculateDexFee(uint256 _value) private pure returns (uint256) {
-        return (_value * 42) / 1000;
+        return (_value * 42) / 1000; // 4.2% fee
     }
 
+    function calculateStandardFee(
+        uint256 _value
+    ) private pure returns (uint256) {
+        return (_value * 42) / 1000000; // 0.00042% fee
+    }
 }

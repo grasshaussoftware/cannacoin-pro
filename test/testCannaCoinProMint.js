@@ -2,7 +2,7 @@ const CannaCoinProMint = artifacts.require("CannaCoinProMint");
 
 contract("CannaCoinProMint", (accounts) => {
     let token;
-    const initialSupply = web3.utils.toBN('10000000000').mul(web3.utils.toBN('10').pow(web3.utils.toBN('18')));
+    const initialSupply = web3.utils.toBN('100000000').mul(web3.utils.toBN('10').pow(web3.utils.toBN('18')));
 
     before(async () => {
         token = await CannaCoinProMint.deployed();
