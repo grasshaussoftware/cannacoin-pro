@@ -3,7 +3,7 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 const ganacheMnemonic = process.env.GANACHE_MNEMONIC;
 const avalancheMnemonic = process.env.AVAX_MNEMONIC;
-const infuraUrl = "https://avalanche-mainnet.infura.io/v3/6f128516655a48ffac7b7656f8ca9f0f"; // Replace with your Avalanche Infura URL
+const infuraUrl = "https://avalanche-mainnet.infura.io/v3/6f128516655a48ffac7b7656f8ca9f0f"; 
 
 module.exports = {
   networks: {
