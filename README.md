@@ -12,7 +12,8 @@ Cannacoin-Pro is designed for exclusivity with a total supply capped at 100 mill
 - **Pool Address:** `0x3536b0152c91E60535508690a650C10bf09fe857`
 
 ## 📜 Credits
-This project is a 2023 innovation by Trap Haus Enterprises and Grass Haus Software in partnership with a prominent UK entity. Realized with the assistance of ChatGPT-4.
+
+This 2023 initiative by Trap Haus Enterprises and Grass Haus Software, in collaboration with a distinguished UK partner, represents a groundbreaking endeavor. This project was brought to fruition with the aid of ChatGPT-4, showcasing a blend of international expertise and advanced AI technology.
 
 ## 🔗 Useful Links
 - **Visit our Website:** [pro.cannacoin.org](https://pro.cannacoin.org)
