@@ -1,6 +1,6 @@
 # Cannacoin-Pro
 
-Welcome to the official repository of Cannacoin-Pro, a unique token blending the promising sectors of commercial cannabis and blockchain technology. Developed on the Avalanche C-Chain, Cannacoin-Pro offers fast and efficient transactions with notably low gas fees.
+Introducing Cannacoin Pro, the latest innovation from the pioneers at Cannacoin, who first emerged in the scene with NWGT.org in 2014. Experience the simplicity and potential of an Avalanche token tailored for cannabis enthusiasts and blockchain investors. Enjoy investing with zero taxes.
 
 ## 🌟 Highlights
 
